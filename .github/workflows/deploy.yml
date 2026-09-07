@@ -28,7 +28,7 @@ jobs:
         run: npm ci
 
       - name: Build Angular
-        run: npm run build -- --base-href /angular-testing-practice/
+        run: npm run build -- --base-href /angular-unit-testing/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
