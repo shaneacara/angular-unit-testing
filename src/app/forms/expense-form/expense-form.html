@@ -1,0 +1,42 @@
+<form class="mt-3" [formGroup]="expenseForm" (ngSubmit)="submit()">
+  <div class="form__container m-auto">
+    <!-- date -->
+    <div class="mb-3 form__date">
+      <label>Date</label>
+      <input type="date" class="form-control" formControlName="date" />
+    </div>
+    <!-- desc -->
+    <div class="mb-3 form__description">
+      <label>Description</label>
+      <input type="text" class="form-control" formControlName="description" />
+    </div>
+    <!-- type -->
+    <div class="mb-3 form__type">
+      <label>Type</label>
+      <select class="form-select" formControlName="type">
+        <option value="Bills">Bills</option>
+        <option value="Essentials">Essentials</option>
+        <option value="Family">Family</option>
+        <option value="Food">Food</option>
+        <option value="Bonding">Bonding</option>
+        <option value="Others">Others</option>
+        <option value="Work">Work</option>
+      </select>
+    </div>
+    <!-- price -->
+    <div class="Price mb-3">
+      <label>Price</label>
+      <input step="0.01" type="number" class="form-control" formControlName="price" />
+    </div>
+    <button class="btn btn-primary form__submit-btn" type="submit" [disabled]="expenseForm.invalid">
+      @if (isEditMode()) {
+        Update
+      } @else {
+        Submit
+      }
+    </button>
+    <button class="btn btn-danger ms-3 form__delete-btn" type="button" (click)="delete()">
+      Delete
+    </button>
+  </div>
+</form>

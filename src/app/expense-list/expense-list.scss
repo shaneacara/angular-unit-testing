@@ -1,0 +1,30 @@
+.expenses {
+  &__container {
+    gap: 16px;
+    width: 80%;
+    list-style-type: none;
+    justify-content: space-between;
+    div {
+      width: 100%;
+    }
+    h5 {
+      justify-self: center;
+    }
+  }
+}
+
+.expense {
+  font-size: 12px;
+  display: flex;
+  cursor: pointer;
+  &__price {
+    display: flex;
+    width: 30%;
+    justify-content: right;
+  }
+  &__desc {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+  }
+}

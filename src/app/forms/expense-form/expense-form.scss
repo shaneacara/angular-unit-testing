@@ -1,0 +1,23 @@
+form {
+  justify-content: center;
+  // padding: 20px;
+  background-color: #c0d6df;
+  width: 60%;
+  justify-self: center;
+  border-radius: 25px;
+  .form {
+    &__container {
+      padding: 40px;
+    }
+    &__submit-btn {
+      color: #4f6d7a;
+      background-color: #e8dab2;
+      border: none;
+    }
+    &__delete-btn {
+      color: #e8dab2;
+      background-color: #dd6e42;
+      border: none;
+    }
+  }
+}

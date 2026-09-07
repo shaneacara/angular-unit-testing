@@ -1,0 +1,65 @@
+<div class="expenses__container m-auto mt-5 d-flex">
+  <div class="expenses__bills">
+    <h5>Bills</h5>
+    @for (bill of bills(); track $index) {
+      <li class="expense" (click)="editExpense(bill)">
+        <span class="expense__price">{{ bill.price }}</span>
+        <span class="expense__desc">{{ bill.description }}</span>
+      </li>
+    }
+  </div>
+  <div class="expenses__essentials">
+    <h5>Essentials</h5>
+    @for (essential of essentials(); track $index) {
+      <li class="expense" (click)="editExpense(essential)">
+        <span class="expense__price">{{ essential.price }}</span>
+        <span class="expense__desc">{{ essential.description }}</span>
+      </li>
+    }
+  </div>
+  <div class="expenses__family">
+    <h5>Family</h5>
+    @for (fam of family(); track $index) {
+      <li class="expense" (click)="editExpense(fam)">
+        <span class="expense__price">{{ fam.price }}</span>
+        <span class="expense__desc">{{ fam.description }}</span>
+      </li>
+    }
+  </div>
+  <div class="expenses__food">
+    <h5>Food</h5>
+    @for (item of food(); track $index) {
+      <li class="expense" (click)="editExpense(item)">
+        <span class="expense__price">{{ item.price }}</span>
+        <span class="expense__desc">{{ item.description }}</span>
+      </li>
+    }
+  </div>
+  <div class="expenses__bonding">
+    <h5>Bonding</h5>
+    @for (item of bonding(); track $index) {
+      <li class="expense" (click)="editExpense(item)">
+        <span class="expense__price">{{ item.price }}</span>
+        <span class="expense__desc">{{ item.description }}</span>
+      </li>
+    }
+  </div>
+  <div class="expenses__others">
+    <h5>Others</h5>
+    @for (other of others(); track $index) {
+      <li class="expense" (click)="editExpense(other)">
+        <span class="expense__price">{{ other.price }}</span>
+        <span class="expense__desc">{{ other.description }}</span>
+      </li>
+    }
+  </div>
+  <div class="expenses__work">
+    <h5>Work</h5>
+    @for (item of work(); track $index) {
+      <li class="expense" (click)="editExpense(item)">
+        <span class="expense__price">{{ item.price }}</span>
+        <span class="expense__desc">{{ item.description }}</span>
+      </li>
+    }
+  </div>
+</div>
